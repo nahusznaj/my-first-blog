@@ -12,18 +12,14 @@
 			<em>emph text</em> emphasizes your text
 			<strong>strong teeeeext</strong>
 		</div>
-
-		<div>
+		
 		{% for post in posts %}
     		<div>
-        	<p>published: {{ post.published_date }}</p>
-        	<h1><a href="">{{ post.title }}</a></h1>
-        	<p>{{ post.text|linebreaksbr }}</p>
+        		<p>published: {{ post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaksbr }}</p>
     		</div>
-		{% endfor %}
-		</div>
-
-
+		{% endfor %}	
 	</body>
 
 </html>
