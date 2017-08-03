@@ -14,20 +14,13 @@
 		</div>
 
 		<div>
-			<br />
-			<a href="http://www.gmail.com">abrí gmail si tenés huevos</a>
-			<ul><li>Si si señores yo soy de Boca</li><li>Si si señores de corazón</li><li>Porque este año desde la boca desde la boca </li><li>Salió el nuevo campeón</li></ul>
-		</div>
-		
-		<div>
-			<a href="http://nahusznaj.pythonanywhere.com">Si, ésta es mi página</a>
-			<ul><li>Si si señores yo soy de Boca</li><li>Si si señores de corazón</li><li>Porque este año desde la boca desde la boca </li><li>Salió el nuevo campeón</li></ul>
-		</div>
-
-		<div>
-			<p>published: 3.08.2017, 11:53</p>
-			<h3> Final post, right? </h3>
-
+		{% for post in posts %}
+    		<div>
+        	<p>published: {{ post.published_date }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+    		</div>
+		{% endfor %}
 		</div>
 
 
